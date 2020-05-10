@@ -54,8 +54,13 @@ class _ContentThreeWidgetState extends State<ContentThreeWidget> {
           return skeletonThree();
         }
         return Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.grey[200],
+            ),
+            color: Colors.grey,
+          ),
           height: 200,
-          color: Colors.grey,
           child: FadeInImage.assetNetwork(
             placeholder: '',
             image: img1,
@@ -75,8 +80,13 @@ class _ContentThreeWidgetState extends State<ContentThreeWidget> {
         }
 
         return Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.grey[200],
+            ),
+            color: Colors.grey,
+          ),
           height: 200,
-          color: Colors.grey,
           child: FadeInImage.assetNetwork(
             placeholder: '',
             image: img2,

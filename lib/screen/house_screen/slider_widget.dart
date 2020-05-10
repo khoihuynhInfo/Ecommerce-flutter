@@ -28,7 +28,7 @@ class _SliderWidgetState extends State<SliderWidget> {
 
   Widget _buildSlider() {
     return Container(
-      height: 130.0,
+      height: 150.0,
       child: Stack(
         children: <Widget>[
           ClipPath(
@@ -39,7 +39,16 @@ class _SliderWidgetState extends State<SliderWidget> {
             ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            decoration: BoxDecoration(
+              // border: Border.all(color: Colors.grey[3=00], width: 2),
+              boxShadow: [
+                new BoxShadow(
+                  color: Colors.pink[200],
+                  blurRadius: 15.0,
+                ),
+              ],
+            ),
+            margin: EdgeInsets.symmetric(horizontal: 20.0),
             child: Swiper(
               // autoplay: true,
               itemBuilder: (BuildContext context, int index) {

@@ -36,7 +36,7 @@ class _ContentOneWidgetState extends State<ContentOneWidget> {
             highlightColor: _shimmerHighlightColor,
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
-              height: 130.0,
+              height: 150.0,
               width: double.infinity,
               color: Colors.grey,
             ),
@@ -44,7 +44,12 @@ class _ContentOneWidgetState extends State<ContentOneWidget> {
         }
 
         return Container(
-          height: 130.0,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.grey[200],
+            ),
+          ),
+          height: 150.0,
           child: Stack(
             alignment: Alignment.center,
             children: <Widget>[
@@ -59,18 +64,18 @@ class _ContentOneWidgetState extends State<ContentOneWidget> {
                   fit: BoxFit.cover,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 16),
-                decoration: BoxDecoration(color: Colors.black54),
-                child: Text(
-                  'Almost before me',
-                  style: GoogleFonts.rajdhani(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 25,
-                    color: Colors.grey[200],
-                  ),
-                ),
-              )
+              // Container(
+              //   padding: EdgeInsets.symmetric(horizontal: 16),
+              //   decoration: BoxDecoration(color: Colors.black54),
+              //   child: Text(
+              //     'Almost before me',
+              //     style: GoogleFonts.rajdhani(
+              //       fontWeight: FontWeight.w400,
+              //       fontSize: 25,
+              //       color: Colors.grey[200],
+              //     ),
+              //   ),
+              // )
             ],
           ),
         );

@@ -37,7 +37,7 @@ class _ContentTwoWidgetState extends State<ContentTwoWidget> {
             highlightColor: _shimmerHighlightColor,
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
-              height: 130.0,
+              height: 150.0,
               width: double.infinity,
               color: Colors.grey,
             ),
@@ -45,7 +45,12 @@ class _ContentTwoWidgetState extends State<ContentTwoWidget> {
         }
 
         return Container(
-          height: 130.0,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.grey[200],
+            ),
+          ),
+          height: 150.0,
           child: Stack(
             alignment: Alignment.center,
             children: <Widget>[
@@ -60,18 +65,22 @@ class _ContentTwoWidgetState extends State<ContentTwoWidget> {
                   fit: BoxFit.cover,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 16),
-                decoration: BoxDecoration(color: Colors.black54),
-                child: Text(
-                  text,
-                  style: GoogleFonts.rajdhani(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 25,
-                    color: Colors.grey[200],
-                  ),
-                ),
-              )
+              // Container(
+              //   decoration: BoxDecoration(
+              //       border: Border.all(
+              //         color: Colors.grey[200],
+              //       ),
+              //       color: Colors.black54),
+              //   padding: EdgeInsets.symmetric(horizontal: 16),
+              //   child: Text(
+              //     text,
+              //     style: GoogleFonts.rajdhani(
+              //       fontWeight: FontWeight.w400,
+              //       fontSize: 25,
+              //       color: Colors.grey[200],
+              //     ),
+              //   ),
+              // )
             ],
           ),
         );
