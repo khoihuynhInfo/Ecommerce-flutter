@@ -1,5 +1,5 @@
 import 'package:demo_project/screen/house_screen/house_screen.dart';
-import 'package:demo_project/screen/setting_screen.dart';
+import 'package:demo_project/screen/setting_screen/setting_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

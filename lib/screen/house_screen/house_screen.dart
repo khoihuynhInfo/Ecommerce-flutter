@@ -1,3 +1,4 @@
+import 'package:demo_project/screen/house_screen/category_widget.dart';
 import 'package:demo_project/screen/house_screen/contentOne_widget.dart';
 import 'package:demo_project/screen/house_screen/contentThree_widget.dart';
 import 'package:demo_project/screen/house_screen/contentTwo_widget.dart';
@@ -36,6 +37,10 @@ class _HouseScreenState extends State<HouseScreen> {
     return ListView(
       children: <Widget>[
         SliderWidget(),
+        SizedBox(
+          height: 24,
+        ),
+        CategoryWidget(),
         SizedBox(
           height: 24,
         ),
