@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:demo_project/screen/setting_screen/choose_theme_bottomSheet.dart';
 import 'package:flutter/material.dart';
 
 class SettingScreen extends StatefulWidget {
@@ -6,28 +9,60 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
+  Timer _timer;
+  bool showFirst = true;
+
+  void _startAniamtionFloatButton() {
+    _timer = Timer.periodic(
+      new Duration(milliseconds: 100),
+      (Timer t) {
+        if (showFirst == true) {
+          _timer.cancel();
+          setState(() {
+            showFirst = false;
+          });
+        }
+      },
+    );
+  }
+
   @override
   void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _startAniamtionFloatButton();
+    });
+
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // backgroundColor: Colors.deepPurple,
-        // title: Text(''),
         elevation: 0,
       ),
       body: _buildBodySetting(),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.menu),
+        onPressed: () {},
+      ),
+      floatingActionButtonLocation: showFirst
+          ? FirstFloatFloatingActionButtonLocation()
+          : FloatingActionButtonLocation.endFloat,
+      floatingActionButtonAnimator: NoScalingAnimation(),
     );
   }
 
   ListView _buildBodySetting() {
     return ListView(
       padding: EdgeInsets.all(18),
-
-      // physics: BouncingScrollPhysics(),
+      physics: BouncingScrollPhysics(),
       children: <Widget>[
         _buildCardSystem(),
         SizedBox(height: 15),
@@ -174,5 +209,36 @@ class _SettingScreenState extends State<SettingScreen> {
         return ChooseThemeBottomSheet();
       },
     );
+  }
+}
+
+class NoScalingAnimation extends FloatingActionButtonAnimator {
+  double _x;
+  double _y;
+  @override
+  Offset getOffset({Offset begin, Offset end, double progress}) {
+    _x = begin.dx + (end.dx - begin.dx) * progress;
+    _y = begin.dy + (end.dy - begin.dy) * progress;
+    return Offset(_x, _y);
+  }
+
+  @override
+  Animation<double> getRotationAnimation({Animation<double> parent}) {
+    return Tween<double>(begin: 0.0, end: 1.0).animate(parent);
+  }
+
+  @override
+  Animation<double> getScaleAnimation({Animation<double> parent}) {
+    return Tween<double>(begin: 0.0, end: 1.0).animate(parent);
+  }
+}
+
+class FirstFloatFloatingActionButtonLocation
+    extends FloatingActionButtonLocation {
+  const FirstFloatFloatingActionButtonLocation();
+
+  @override
+  Offset getOffset(ScaffoldPrelayoutGeometry scaffoldGeometry) {
+    return Offset(1200.0, 100.0);
   }
 }
