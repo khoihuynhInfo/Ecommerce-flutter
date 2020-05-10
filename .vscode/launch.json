@@ -1,0 +1,102 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "name": "[Default] Flutter Debug",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+    },
+    {
+      "name": "[Nexus 4] Flutter Debug",
+      "type": "dart",
+      "request": "launch",
+      "program": "mobile/lib/development_main.dart",
+      "deviceId": "Google Nexus 4",
+      "args": [
+        "--flavor=development"
+      ],
+      "vmAdditionalArgs": [
+        "--flavor=development"
+      ],
+    },
+    {
+      "name": "[Nexus 5] Flutter Debug",
+      "type": "dart",
+      "request": "launch",
+      "program": "mobile/lib/development_main.dart",
+      "deviceId": "Google Nexus 5",
+      "args": [
+        "--flavor=development"
+      ],
+      "vmAdditionalArgs": [
+        "--flavor=development"
+      ],
+    },
+    {
+      "name": "[Nexus 9] Flutter Debug",
+      "type": "dart",
+      "request": "launch",
+      "program": "mobile/lib/development_main.dart",
+      "deviceId": "Google Nexus 9",
+      "args": [
+        "--flavor=development"
+      ],
+      "vmAdditionalArgs": [
+        "--flavor=development"
+      ],
+    },
+    {
+      "name": "Flutter Release",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart",
+      "flutterMode": "release",
+    },
+    {
+      "name": "[Default] Flutter Profile",
+      "type": "dart",
+      "request": "launch",
+      "program": "mobile/lib/development_main.dart",
+      "args": [
+        "--flavor=development"
+      ],
+      "vmAdditionalArgs": [
+        "--flavor=development"
+      ],
+    },
+    {
+      "name": "i18n Generator",
+      "program": "mobile/tools/i18n_generator/lib/main.dart",
+      "request": "launch",
+      "type": "dart",
+      "cwd": "./",
+      "args": [
+        "--src",
+        "/mobile/",
+        "--output",
+        "lib/generated/i18n_lookup.dart"
+      ]
+    },
+  ],
+  "compounds": [
+    {
+      "name": "[Nexus 4 & 9] Devices",
+      "configurations": [
+        "[Nexus 4] Flutter Debug",
+        "[Nexus 9] Flutter Debug"
+      ],
+    },
+    {
+      "name": "[Nexus 5 & 9] Devices",
+      "configurations": [
+        "[Nexus 5] Flutter Debug",
+        "[Nexus 9] Flutter Debug"
+      ],
+    }
+  ]
+}

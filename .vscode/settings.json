@@ -1,0 +1,24 @@
+{
+  "[dart]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.renderWhitespace": "all",
+    "editor.formatOnSave": true,
+  },
+  "files.associations": {
+    "**/lib/generated/**/*.dart": "plaintext",
+  },
+  "files.exclude": {
+    "**/*.dart_tool": true,
+    "**/*.flutter-plugins": true,
+    "**/*.flutter-plugins-dependencies": true,
+    "**/*.packages": true,
+    "**/*.lock": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  }
+}
