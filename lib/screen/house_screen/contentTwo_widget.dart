@@ -49,6 +49,9 @@ class _ContentTwoWidgetState extends State<ContentTwoWidget> {
             border: Border.all(
               color: Colors.grey[200],
             ),
+            borderRadius: BorderRadius.circular(
+              5.0,
+            ),
           ),
           height: 150.0,
           child: Stack(
@@ -89,7 +92,7 @@ class _ContentTwoWidgetState extends State<ContentTwoWidget> {
   }
 
   Future<bool> _getDataBlock2() async {
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(milliseconds: 500));
     return true;
   }
 }

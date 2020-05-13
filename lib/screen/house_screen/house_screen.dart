@@ -2,7 +2,9 @@ import 'package:demo_project/screen/house_screen/category_widget.dart';
 import 'package:demo_project/screen/house_screen/contentOne_widget.dart';
 import 'package:demo_project/screen/house_screen/contentThree_widget.dart';
 import 'package:demo_project/screen/house_screen/contentTwo_widget.dart';
+import 'package:demo_project/screen/house_screen/recent_view.dart';
 import 'package:demo_project/screen/house_screen/slider_widget.dart';
+import 'package:demo_project/widgets/title_section.dart';
 import 'package:flutter/material.dart';
 
 class HouseScreen extends StatefulWidget {
@@ -20,7 +22,7 @@ class _HouseScreenState extends State<HouseScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Agent Zoo'),
+        // title: Text('Agent Zoo'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
@@ -28,6 +30,7 @@ class _HouseScreenState extends State<HouseScreen> {
           )
         ],
         elevation: 0,
+        backgroundColor: Colors.transparent,
       ),
       body: _buildBody(),
     );
@@ -36,11 +39,11 @@ class _HouseScreenState extends State<HouseScreen> {
   ListView _buildBody() {
     return ListView(
       children: <Widget>[
-        SliderWidget(),
+        CategoryWidget(),
         SizedBox(
           height: 24,
         ),
-        CategoryWidget(),
+        SliderWidget(),
         SizedBox(
           height: 24,
         ),
@@ -60,8 +63,21 @@ class _HouseScreenState extends State<HouseScreen> {
         ),
         ContentThreeWidget(),
         SizedBox(
-          height: 24,
+          height: 62,
         ),
+        TitleSectionWidget(titleName: 'Recent View'),
+        RecentWidget(),
+        SizedBox(
+          height: 62,
+        ),
+        TitleSectionWidget(titleName: 'Woman Collections'),
+        RecentWidget(),
+        SizedBox(
+          height: 62,
+        ),
+        TitleSectionWidget(titleName: 'Man Collections'),
+        RecentWidget(),
+        TitleSectionWidget(titleName: 'Kids Collections'),
       ],
     );
   }

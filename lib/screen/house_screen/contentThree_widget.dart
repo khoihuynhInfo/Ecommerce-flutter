@@ -36,7 +36,7 @@ class _ContentThreeWidgetState extends State<ContentThreeWidget> {
             child: _buildThreeLeft(),
           ),
           SizedBox(
-            width: 16,
+            width: 14,
           ),
           Expanded(
             child: _buildThreeRight(),
@@ -58,7 +58,10 @@ class _ContentThreeWidgetState extends State<ContentThreeWidget> {
             border: Border.all(
               color: Colors.grey[200],
             ),
-            color: Colors.grey,
+            color: Colors.grey[200],
+            borderRadius: BorderRadius.circular(
+              5.0,
+            ),
           ),
           height: 200,
           child: FadeInImage.assetNetwork(
@@ -84,7 +87,10 @@ class _ContentThreeWidgetState extends State<ContentThreeWidget> {
             border: Border.all(
               color: Colors.grey[200],
             ),
-            color: Colors.grey,
+            color: Colors.grey[200],
+            borderRadius: BorderRadius.circular(
+              5.0,
+            ),
           ),
           height: 200,
           child: FadeInImage.assetNetwork(
@@ -109,12 +115,12 @@ class _ContentThreeWidgetState extends State<ContentThreeWidget> {
   }
 
   Future<bool> _getDataBlock31() async {
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 1));
     return true;
   }
 
   Future<bool> _getDataBlock32() async {
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 1));
     return true;
   }
 }

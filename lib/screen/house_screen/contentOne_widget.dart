@@ -48,6 +48,9 @@ class _ContentOneWidgetState extends State<ContentOneWidget> {
             border: Border.all(
               color: Colors.grey[200],
             ),
+            borderRadius: BorderRadius.circular(
+              5.0,
+            ),
           ),
           height: 150.0,
           child: Stack(
@@ -84,7 +87,7 @@ class _ContentOneWidgetState extends State<ContentOneWidget> {
   }
 
   Future<bool> _getDataBlock1() async {
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(milliseconds: 500));
     return true;
   }
 }

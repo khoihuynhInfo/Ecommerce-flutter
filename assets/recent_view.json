@@ -1,0 +1,91 @@
+[
+    {
+        "id": "0001",
+        "imgUrl": "assets/images/img1.jpg",
+        "name": "T-Shirt with Next",
+        "percenDiscount": "10%",
+        "price": "27.00",
+        "defaultQualityStar": "5",
+        "percentStar": "30%"
+    },
+    {
+        "id": "0002",
+        "imgUrl": "assets/images/img2.jpg",
+        "name": "T-Shirt with Next",
+        "percenDiscount": "10%",
+        "price": "27.00",
+        "defaultQualityStar": "5",
+        "percentStar": "30%"
+    },
+    {
+        "id": "0003",
+        "imgUrl": "assets/images/img3.jpg",
+        "name": "T-Shirt with Next",
+        "percenDiscount": "10%",
+        "price": "27.00",
+        "defaultQualityStar": "5",
+        "percentStar": "30%"
+    },
+    {
+        "id": "0004",
+        "imgUrl": "assets/images/img4.jpg",
+        "name": "T-Shirt with Next",
+        "percenDiscount": "10%",
+        "price": "27.00",
+        "defaultQualityStar": "5",
+        "percentStar": "30%"
+    },
+    {
+        "id": "0005",
+        "imgUrl": "assets/images/img5.jpg",
+        "name": "T-Shirt with Next",
+        "percenDiscount": "10%",
+        "price": "27.00",
+        "defaultQualityStar": "5",
+        "percentStar": "30%"
+    },
+    {
+        "id": "0006",
+        "imgUrl": "assets/images/img6.jpg",
+        "name": "T-Shirt with Next",
+        "percenDiscount": "10%",
+        "price": "27.00",
+        "defaultQualityStar": "5",
+        "percentStar": "30%"
+    },
+    {
+        "id": "0007",
+        "imgUrl": "assets/images/img7.jpg",
+        "name": "T-Shirt with Next",
+        "percenDiscount": "10%",
+        "price": "27.00",
+        "defaultQualityStar": "5",
+        "percentStar": "30%"
+    },
+    {
+        "id": "0008",
+        "imgUrl": "assets/images/img1.jpg",
+        "name": "T-Shirt with Next",
+        "percenDiscount": "10%",
+        "price": "27.00",
+        "defaultQualityStar": "5",
+        "percentStar": "30%"
+    },{
+        "id": "0009",
+        "imgUrl": "assets/images/img1.jpg",
+        "name": "T-Shirt with Next",
+        "percenDiscount": "10%",
+        "price": "27.00",
+        "defaultQualityStar": "5",
+        "percentStar": "30%"
+    },
+    {
+        "id": "00010",
+        "imgUrl": "assets/images/img1.jpg",
+        "name": "T-Shirt with Next",
+        "percenDiscount": "10%",
+        "price": "27.00",
+        "defaultQualityStar": "5",
+        "percentStar": "30%"
+    }
+]

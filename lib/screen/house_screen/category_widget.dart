@@ -64,7 +64,9 @@ class _CategoryWidgetState extends State<CategoryWidget> {
         scrollDirection: Axis.horizontal,
         children: categories.map((category) {
           return Container(
-            margin: EdgeInsets.symmetric(horizontal: 16),
+            margin: EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
             child: Column(
               children: <Widget>[
                 Container(
